@@ -184,9 +184,9 @@ namespace TrackerOOT
                     if (textbox.Text != string.Empty)
                     {
                         var selectedPlace = textbox.Text.ToUpper().Trim();
-                        var find = ListWotH.Where(x => x.Name == selectedPlace);
-                        if(find.Count() <= 0)
-                        {
+                        //var find = ListWotH.Where(x => x.Name == selectedPlace);
+                        //if(find.Count() <= 0)
+                        //{
                             WotH newWotH = null;
                             if (ListWotH.Count <= 0)
                                 newWotH = new WotH(selectedPlace, ListImage_WothItemsOption, new Point(2, -LabelSettings.Height), LabelSettings, GossipStoneSize);
@@ -206,7 +206,7 @@ namespace TrackerOOT
                             }
                             //Move TextBoxCustom
                             textBoxCustom.newLocation(new Point(2, newWotH.LabelPlace.Location.Y + newWotH.LabelPlace.Height), this.Location);
-                        }
+                        //}
                     }
                 }
                 textbox.Text = string.Empty;
